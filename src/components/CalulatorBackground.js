@@ -5,7 +5,8 @@ import CalculatorPad from './CalculatorPad';
 const CalulatorBackground = () => {
   return (
     <div className='appWrapper'>
-      <div className='calculator'>
+      <div className='calculator'>        
+      <div className='productName'>Calculator <span className='altText'>Plus</span></div>
         <CalculatorDisplay />
         <CalculatorPad />
       </div>
