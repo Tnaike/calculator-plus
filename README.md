@@ -1,6 +1,7 @@
 # Calculator-Plus
 
-[Calculator-Plus__capture](https://user-images.githubusercontent.com/35966972/149702127-7cda3042-5e9e-4b12-a305-b61308a00f8a.PNG)
+![Calculator-Plus__capture](https://user-images.githubusercontent.com/35966972/149732605-94e72b83-1d81-419c-8220-cb604432d1e6.PNG)
+
 ## Available Scripts
 
 In the project directory, you can run:
