@@ -44,6 +44,7 @@ const CalculatorDisplay = () => {
   //calculate
   const calculate = () => {
     try {
+      // eslint-disable-next-line no-eval
       setResult(eval(operation).toString());
     } catch (error) {
       setResult('Invalid input');
