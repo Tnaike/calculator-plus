@@ -23,10 +23,10 @@ const CalculatorPad = () => {
       <CalcButton className='keyPad keyPad-ac'>AC</CalcButton>
       <CalcButton className='keyPad keyPad-del'>DEL</CalcButton>
       <CalcButton className='keyPad keyPad-percent o-key'>%</CalcButton>
-      <CalcButton className='keyPad keyPad-CalcButtonide o-key'>÷</CalcButton>
+      <CalcButton className='keyPad keyPad-CalcButtonide o-key'>&divide;</CalcButton>
       <CalcButton className='keyPad keyPad-7'>7</CalcButton>
       <CalcButton className='keyPad keyPad-8'>8</CalcButton>
-      <CalcButton className='keyPad keyPad-9'>9</CalcButton>
+      <CalcButton className='keyPad'>9</CalcButton>
       <CalcButton className='keyPad keyPad-multiply o-key'>x</CalcButton>
       <CalcButton className='keyPad keyPad-4'>4</CalcButton>
       <CalcButton className='keyPad keyPad-5'>5</CalcButton>

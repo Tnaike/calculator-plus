@@ -1,6 +1,6 @@
 import React from 'react';
 import CalculatorDisplay from '../components/CalculatorDisplay';
-import CalculatorPad from './CalculatorPad';
+// import CalculatorPad from './CalculatorPad';
 
 const CalulatorBackground = () => {
   return (
@@ -8,7 +8,7 @@ const CalulatorBackground = () => {
       <div className='calculator'>        
       <div className='productName'>Calculator <span className='altText'>Plus</span></div>
         <CalculatorDisplay />
-        <CalculatorPad />
+        {/* <CalculatorPad /> */}
       </div>
     </div>
   );
