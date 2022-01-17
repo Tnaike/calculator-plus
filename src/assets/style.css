@@ -21,21 +21,22 @@
   border-radius: 0.2rem;
   background-color: var(--green);
   box-shadow: inset 0 0 0.1rem;
+  overflow: hidden;
 }
 
 .display-operation,
 .display-result {
   display: inline-block;
   white-space: nowrap;
-  padding: 0 0.7rem;
+  padding: 0 0.5rem;
   color: var(--black);
 }
 .display-operation {
   height: 1.2rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 .display-result {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 .calculator-pad {

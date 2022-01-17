@@ -45,7 +45,11 @@ const CalculatorDisplay = () => {
   const calculate = () => {
     try {
       // eslint-disable-next-line no-eval
-      setResult(eval(operation).toString());
+      setResult(
+        eval(operation)
+          .toString()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+      );
     } catch (error) {
       setResult('Invalid input');
     }
@@ -67,18 +71,10 @@ const CalculatorDisplay = () => {
         <CalcButton onClick={backspace} className='keyPad'>
           DEL
         </CalcButton>
-        <CalcButton
-          name='%'
-          onClick={handleClick}
-          className='keyPad o-key'
-        >
+        <CalcButton name='%' onClick={handleClick} className='keyPad o-key'>
           %
         </CalcButton>
-        <CalcButton
-          name='/'
-          onClick={handleClick}
-          className='keyPad o-key'
-        >
+        <CalcButton name='/' onClick={handleClick} className='keyPad o-key'>
           &divide;
         </CalcButton>
         <CalcButton name='7' onClick={handleClick} className='keyPad'>
@@ -90,11 +86,7 @@ const CalculatorDisplay = () => {
         <CalcButton name='9' onClick={handleClick} className='keyPad'>
           9
         </CalcButton>
-        <CalcButton
-          name='*'
-          onClick={handleClick}
-          className='keyPad o-key'
-        >
+        <CalcButton name='*' onClick={handleClick} className='keyPad o-key'>
           x
         </CalcButton>
         <CalcButton name='4' onClick={handleClick} className='keyPad'>
@@ -106,11 +98,7 @@ const CalculatorDisplay = () => {
         <CalcButton name='6' onClick={handleClick} className='keyPad'>
           6
         </CalcButton>
-        <CalcButton
-          name='-'
-          onClick={handleClick}
-          className='keyPad o-key'
-        >
+        <CalcButton name='-' onClick={handleClick} className='keyPad o-key'>
           -
         </CalcButton>
         <CalcButton name='1' onClick={handleClick} className='keyPad'>
@@ -122,18 +110,10 @@ const CalculatorDisplay = () => {
         <CalcButton name='3' onClick={handleClick} className='keyPad'>
           3
         </CalcButton>
-        <CalcButton
-          name='+'
-          onClick={handleClick}
-          className='keyPad o-key'
-        >
+        <CalcButton name='+' onClick={handleClick} className='keyPad o-key'>
           +
         </CalcButton>
-        <CalcButton
-          name='.'
-          onClick={handleClick}
-          className='keyPad'
-        >
+        <CalcButton name='.' onClick={handleClick} className='keyPad'>
           .
         </CalcButton>
         <CalcButton name='0' onClick={handleClick} className='keyPad'>
