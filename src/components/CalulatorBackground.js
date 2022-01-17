@@ -6,7 +6,7 @@ const CalulatorBackground = () => {
   return (
     <div className='appWrapper'>
       <div className='calculator'>        
-      <div className='productName'>Calculator <span className='altText'>Plus</span></div>
+      <div className='productName'>Calculator <span className='altText'>Plus</span><sup>&trade;</sup></div>
         <CalculatorDisplay />
         {/* <CalculatorPad /> */}
       </div>
