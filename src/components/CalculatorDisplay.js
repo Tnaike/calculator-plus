@@ -46,9 +46,8 @@ const CalculatorDisplay = () => {
     try {
       // eslint-disable-next-line no-eval
       setResult(
-        eval(operation)
-          .toString()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+        // eslint-disable-next-line no-eval
+        Math.round(eval(operation).toString() * 100) / 100
       );
     } catch (error) {
       setResult('Invalid input');
