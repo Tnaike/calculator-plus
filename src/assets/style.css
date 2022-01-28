@@ -1,0 +1,122 @@
+.titleStyle {
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.calculator,
+.calculator-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 12rem;
+  height: 20rem;
+  padding: 1.2rem 1rem;
+  background: var(--blue2);
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+.calculator-2 {
+  height: initial;
+}
+.calculator-display,
+.calculator-display-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 4rem;
+  margin: 1rem auto;
+  padding: 0.8rem 0;
+  border-radius: 0.2rem;
+  background-color: var(--green);
+  box-shadow: inset 0 0 0.1rem;
+  overflow: hidden;
+}
+
+.calculator-display-2 {
+  height: 1.4rem;
+}
+
+.display-operation,
+.display-result {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0 0.5rem;
+  color: var(--black);
+}
+.display-operation {
+  height: 1.2rem;
+  font-size: 0.85rem;
+}
+.display-result {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.calculator-pad {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue2);
+  gap: 0.4rem 0.4rem;
+}
+.keyPad {
+  color: var(--black);
+  background-color: var(--white2);
+}
+.keyPad:active {
+  box-shadow: 0px 4px 8px #000;
+  -webkit-transform: scale(0.95);
+  transform: scale(0.96);
+  opacity: 0.9;
+}
+.o-key {
+  background-color: var(--grey);
+  font-size: 1.2rem;
+}
+.keyPad-equal {
+  grid-column: span 2;
+  background: var(--orange);
+  font-size: 1.5rem;
+}
+.keyPad-ac {
+  background: var(--red);
+  color: var(--white);
+}
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 13px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #5430da;
+  border-color: #5430da;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #483dff;
+  border-color: #3c30ff;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 20px;
+  line-height: 1.5;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  user-select: none;
+  outline: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
