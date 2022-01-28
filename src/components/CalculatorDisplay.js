@@ -44,10 +44,8 @@ const CalculatorDisplay = () => {
   //calculate
   const calculate = () => {
     try {
-      setResult(
-        // eslint-disable-next-line no-eval
-        Math.round(eval(operation).toString() * 100) / 100
-      );
+      // eslint-disable-next-line no-eval
+      setResult(Math.round(eval(operation).toString() * 100) / 100);
     } catch (error) {
       setResult('Error');
     }
