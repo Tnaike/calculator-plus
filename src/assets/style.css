@@ -17,6 +17,7 @@
   overflow: hidden;
 }
 .calculator-2 {
+  max-width: 13rem;
   height: initial;
 }
 .calculator-display,

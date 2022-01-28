@@ -9,6 +9,7 @@ const DisplayResult = styled.div`
   text-align: center;
   background: #1f2128;
   padding: 0.4rem;
+  letter-spacing: 0.7px;
   border: 1px solid;
   border-color: ${({borderColor}) => borderColor || '#FFF'};
 `;
@@ -26,13 +27,13 @@ const BMIDisplay = () => {
 
     if (bmiVal < 18.5) {
       setWeightStatus('Underweight');
-      setStatusColor('#dfab5c');
+      setStatusColor('#318dff');
     } else if (bmiVal >= 18.5 && bmiVal <= 24.9) {
       setWeightStatus('Healthy weight');
-      setStatusColor('#318dff');
+      setStatusColor('#3dd365');
     } else if (bmiVal >= 25 && bmiVal <= 29.9) {
       setWeightStatus('Overweight');
-      setStatusColor('#F00');
+      setStatusColor('#dfab5c');
     } else {
       setWeightStatus('Your BMI falls within the obese range');
       setStatusColor('#F00');
