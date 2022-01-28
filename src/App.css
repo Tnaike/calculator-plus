@@ -33,39 +33,6 @@ html {
   height: 100%;
   margin: 0;
 }
-.mt-15 {
-  margin-top: 15px !important;
-}
-.mt-30 {
-  margin-top: 30px !important;
-}
-.mb-15 {
-  margin-bottom: 15px !important;
-}
-.mb-30 {
-  margin-bottom: 30px !important;
-}
-.fs-15 {
-  font-size: 15px;
-}
-.fs-16 {
-  font-size: 16px;
-}
-.fw-5 {
-  font-weight: 500;
-}
-.fw-6 {
-  font-weight: 600;
-}
-.fw-7 {
-  font-weight: 700;
-}
-.text-center {
-  text-align: center;
-}
-.text-right {
-  text-align: right;
-}
 .appWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -91,4 +58,3 @@ html {
 .altText{
   color: var(--orange2);
 }
-.box-shade{text-shadow: 0 3px 8px #17042f;}
