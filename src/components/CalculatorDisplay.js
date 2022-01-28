@@ -38,7 +38,7 @@ const CalculatorDisplay = () => {
 
   //backspace DEL
   const backspace = () => {
-    setOperation(operation?.slice(0, -1));
+    setOperation(operation?.slice(0, -1)); // Or (0, operation?.length -1)
   };
 
   //calculate
@@ -47,7 +47,7 @@ const CalculatorDisplay = () => {
       // eslint-disable-next-line no-eval
       setResult(Math.round(eval(operation).toString() * 100) / 100);
     } catch (error) {
-      setResult('Invalid input');
+      setResult('Error');
     }
   };
   return (

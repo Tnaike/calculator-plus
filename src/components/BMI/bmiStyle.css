@@ -1,8 +1,8 @@
 ::placeholder {
-    color: #0c0e11;
-    font-size: 1em;
-    font-weight: 500;
-  }
+  color: #0c0e11;
+  font-size: 1em;
+  font-weight: 500;
+}
 .mb-2 {
   margin-bottom: 1.5rem;
 }
@@ -76,8 +76,8 @@ input[type='number'] {
   pointer-events: none;
 }
 
-.resultFigure{
-    font-size:1rem;
-    font-weight: bold;
-    /* color: #318dff; */
+.resultFigure {
+  font-size: 1rem;
+  font-weight: bold;
+  /* color: #318dff; */
 }

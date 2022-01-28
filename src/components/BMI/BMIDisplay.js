@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './bmiStyle.css';
 import styled from 'styled-components';
 
-const DisplayResult = styled.p`
+const DisplayResult = styled.div`
   display: block;
   font-size: 14px;
   color: var(--white);
@@ -13,78 +13,67 @@ const DisplayResult = styled.p`
 `;
 
 const BMIDisplay = () => {
-  const [height, setHeight] = useState('');
-  const [weight, setWeight] = useState('');
-  const [resultStatus, setResultStatus] = useState('');
   const [statusColor, setStatusColor] = useState('#FFF');
-  const [weightStatus, setWeightStatus] = useState('');
+  const [height, setHeight] = useState();
+  const [weight, setWeight] = useState();
+  const [bmiStatus, setBmiStatus] = useState();
+  const [weightStatus, setWeightStatus] = useState();
 
-  const HandleSubmit = (e) => {
-    const calBmi = (weight / ((height * height) / 10000)).toFixed(2);
-    setResultStatus(calBmi);
+  const HandleSubmit = () => {
+    const bmiVal = (weight / ((height * height) / 10000)).toFixed(2);
+    setBmiStatus(bmiVal);
 
-    if (resultStatus < 18.5) {
-      setStatusColor('#F00');
+    if (bmiVal < 18.5) {
       setWeightStatus('Underweight');
-    } else if (resultStatus >= 18.5 && resultStatus <= 24.9) {
-      setStatusColor('#318dff');
+      setStatusColor('#dfab5c');
+    } else if (bmiVal >= 18.5 && bmiVal <= 24.9) {
       setWeightStatus('Healthy weight');
-    } else if (resultStatus >= 25 && resultStatus <= 29.9) {
-      setStatusColor('#F00');
+      setStatusColor('#318dff');
+    } else if (bmiVal >= 25 && bmiVal <= 29.9) {
       setWeightStatus('Overweight');
-    } else {
       setStatusColor('#F00');
+    } else {
       setWeightStatus('Your BMI falls within the obese range');
+      setStatusColor('#F00');
     }
-
-    e.preventDefault();
   };
 
   return (
     <>
-      <form className='cal-form'>
-        <div className='wrap-input'>
-          <input
-            type='number'
-            name='height'
-            className='input-field'
-            defaultValue={height}
-            onChange={(e) => setHeight(e.target.value)}
-            placeholder='Height (CM)'
-            min='1'
-            max='635'
-            required
-          />
-        </div>
-        <div className='wrap-input'>
-          <input
-            type='number'
-            name='Weight'
-            className='input-field'
-            defaultValue={weight}
-            onChange={(e) => setWeight(e.target.value)}
-            placeholder='Weight (KG)'
-            max='272'
-            required
-          />
-        </div>
-        <div className='btn-container mb-15'>
-          <input
-            type='submit'
-            value='Calculate BMI'
-            className='btn-block btn-primary'
-            onClick={HandleSubmit}
-          />
-        </div>
-        {resultStatus && (
-          <DisplayResult>
-            <span className='resultFigure' style={{ color: statusColor }}>
-              {resultStatus}
-            </span>{' '}
-            {weightStatus}
-          </DisplayResult>
-        )}
-      </form>
+      <div className='wrap-input'>
+        <input
+          type='number'
+          className='input-field'
+          onChange={(e) => setHeight(e.target.value)}
+          placeholder='Height (CM)'
+          min='1'
+          max='635'
+          required
+        />
+      </div>
+      <div className='wrap-input'>
+        <input
+          type='number'
+          className='input-field'
+          onChange={(e) => setWeight(e.target.value)}
+          placeholder='Weight (KG)'
+          max='272'
+          required
+        />
+      </div>
+      <div className='btn-container mb-15'>
+        <button className='btn-block btn-primary' onClick={HandleSubmit}>
+          Calculate BMI
+        </button>
+      </div>
+      {bmiStatus && (
+        <DisplayResult>
+          <span className='resultFigure' style={{ color: statusColor }}>
+            {bmiStatus}
+          </span>{' '}
+          <p>{weightStatus}</p>
+        </DisplayResult>
+      )}
     </>
   );
 };
