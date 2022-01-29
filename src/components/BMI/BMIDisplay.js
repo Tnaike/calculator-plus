@@ -11,7 +11,7 @@ const DisplayResult = styled.div`
   padding: 0.4rem;
   letter-spacing: 0.7px;
   border: 1px solid;
-  border-color: ${({borderColor}) => borderColor || '#FFF'};
+  border-color: ${({ borderColor }) => borderColor || '#FFF'};
 `;
 
 const BMIDisplay = () => {

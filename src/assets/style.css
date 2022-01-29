@@ -121,3 +121,12 @@
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     -webkit-box-shadow 0.15s ease-in-out;
 }
+.resultRate{
+  display: inline-block;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 15px;
+  background: var(--green);
+  border-radius: 2px;
+}

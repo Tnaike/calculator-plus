@@ -30,6 +30,9 @@ html {
   height: 100%;
   margin: 0;
 }
+.mt-5 {
+  margin-top: 5px !important;
+}
 .mt-15 {
   margin-top: 15px !important;
 }
