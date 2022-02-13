@@ -11,7 +11,11 @@ function App() {
       <Switch>
         <Route path='/' exact component={CalulatorBackground} />
         <Route path='/bmi-calculator' exact component={BMIBackground} />
-        <Route path='/currency-converter' exact component={CurrencyConverterBackground} />
+        <Route
+          path='/currency-converter'
+          exact
+          component={CurrencyConverterBackground}
+        />
         <Redirect to='/' />
       </Switch>
     </>

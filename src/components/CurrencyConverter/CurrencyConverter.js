@@ -17,32 +17,13 @@ const DisplayResult = styled.div`
 const CurrencyConverter = () => {
   return (
     <>
-    <div className='wrap-input'>
-      <div className='input-group'>
-        <select className='form-select' id='inputGroupSelect01'>
-          <option value='NGN' selected>
-            ₦ - NGN
-          </option>
-          <option value='USD'>$ - USD</option>
-          <option value='Euro'>€ - Euro</option>
-          <option value='GBP'>£ - GBP</option>
-          <option value='AED'>د.إ - AED</option>
-          <option value='Yuan'>¥ - Yuan</option>
-          <option value='ZAR'>R - ZAR</option>
-          <option value='KES'>Ksh - KES</option>
-          <option value='CHF'>Fr - CHF</option>
-          <option value='INR'>₹ - INR</option>
-        </select>
-        <input type='number' className='input-control' min='0' required/>
-      </div>
-    </div>
       <div className='wrap-input'>
         <div className='input-group'>
           <select className='form-select' id='inputGroupSelect01'>
-            <option value='NGN'>
+            <option value='NGN' selected>
               ₦ - NGN
             </option>
-            <option value='USD' selected>$ - USD</option>
+            <option value='USD'>$ - USD</option>
             <option value='Euro'>€ - Euro</option>
             <option value='GBP'>£ - GBP</option>
             <option value='AED'>د.إ - AED</option>
@@ -52,7 +33,26 @@ const CurrencyConverter = () => {
             <option value='CHF'>Fr - CHF</option>
             <option value='INR'>₹ - INR</option>
           </select>
-          <input type='number' className='input-control' min='0' required/>
+          <input type='number' className='input-control' min='0' required />
+        </div>
+      </div>
+      <div className='wrap-input'>
+        <div className='input-group'>
+          <select className='form-select' id='inputGroupSelect01'>
+            <option value='NGN'>₦ - NGN</option>
+            <option value='USD' selected>
+              $ - USD
+            </option>
+            <option value='Euro'>€ - Euro</option>
+            <option value='GBP'>£ - GBP</option>
+            <option value='AED'>د.إ - AED</option>
+            <option value='Yuan'>¥ - Yuan</option>
+            <option value='ZAR'>R - ZAR</option>
+            <option value='KES'>Ksh - KES</option>
+            <option value='CHF'>Fr - CHF</option>
+            <option value='INR'>₹ - INR</option>
+          </select>
+          <input type='number' className='input-control' min='0' required />
         </div>
       </div>
 
