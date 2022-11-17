@@ -21,6 +21,10 @@ const CalcButton = styled.button`
   user-select: none;
 `;
 
+const calculator = {
+  sumValue: (a, b) => a + b,
+}
+
 const CalculatorDisplay = () => {
   const [operation, setOperation] = useState('');
   const [result, setResult] = useState('');
@@ -124,5 +128,7 @@ const CalculatorDisplay = () => {
     </>
   );
 };
+
+module.exports = calculator;
 
 export default CalculatorDisplay;
